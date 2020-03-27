@@ -1,0 +1,17 @@
+//  variables
+int PulseSensorPin = 0; // Pulse Sensor XD-58C connected to ANALOG PIN A0
+int Signal;             // holds the incoming raw data. Signal value can range from 0-1024
+
+// setup Function:
+void setup() {
+   Serial.begin(9600); // Set Serial Communication. 
+}
+
+// loop Function
+void loop() {
+int Signal1= analogRead(PulseSensorPin)-214;  // Read the PulseSensor's value. 
+
+  Serial.println(Signal1);  // Send the Signal value to Serial Plotter or monitor.
+  delay(100);
+
+}
